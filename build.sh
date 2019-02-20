@@ -1,2 +1,2 @@
 #!/bin/bash
-docker build . -t webserver:v1
+docker build . -t ericogr/linuxtips-giropops:v1
