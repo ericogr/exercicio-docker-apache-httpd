@@ -1,0 +1,14 @@
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: linuxtips-giropops-service
+  namespace: linuxtips-giropops
+spec:
+  selector:
+    application: giropops
+  ports:
+  - protocol: TCP
+    port: 32555
+    targetPort: 80
+  type: LoadBalancer

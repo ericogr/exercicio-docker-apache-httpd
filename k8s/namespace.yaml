@@ -1,0 +1,8 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  labels:
+    application: giropops
+    role: aplicativo
+  name: linuxtips-giropops

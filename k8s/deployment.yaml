@@ -1,0 +1,24 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: linuxtips-giropops-deployment
+  namespace: linuxtips-giropops
+  labels:
+    application: giropops
+    role: aplicativo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      application: giropops
+  template:
+    metadata:
+      labels:
+        application: giropops
+    spec:
+      containers:
+      - name: linuxtips-giropops
+        image: ericogr/linuxtips-giropops:v2
+        ports:
+        - containerPort: 80
